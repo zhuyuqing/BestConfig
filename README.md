@@ -1,64 +1,41 @@
 
+
 Better Configurations for Large-Scale Systems (BestConfig)
 ====================================
 
-Bestconfig can find better configurations for a specific large-scale system under a given application workload.
+[Documentation](http://bestconfig.readthedocs.io) | [QuickStart](http://bestconfig.readthedocs.io/en/latest/source/how%20to%20apply/index_howtoapply.html) | [Use cases](http://bestconfig.readthedocs.io/en/latest/source/examples/index_usecase.html) | [FAQ](http://bestconfig.readthedocs.io/en/latest/source/faq/index_faq.html) 
 
-Given the diverse application workloads, a large-scale system with hundreds of configuration parameters, such as Spark, 
-Hadoop, Cassandra, MySQL and Tomcat, does not necessarily offer the best performance under their default configurations.
+***BestConfig*** is a system for automatically ***finding a best configuration setting within a resource limit*** for a deployed system under a given application workload. BestConfig is designed with an extensible architecture to automate the configuration tuning ***for general systems***.
 
-Currently, Bestconfig has been tested on the following systems. It has also been applied to the Huawei Cloud+ applications. 
-
->>>[Spark: results](https://github.com/zhuyuqing/bestconf/blob/master/doc/spark.md)
-
->>>[Cassandra: results](https://github.com/zhuyuqing/bestconf/blob/master/doc/cassandra.md)
-
->>>[Hive+Hadoop: results](https://github.com/zhuyuqing/bestconf/blob/master/doc/hadoop.md)
-
->>>[Tomcat Server: results](https://github.com/zhuyuqing/bestconf/blob/master/doc/tomcat.md)
-
->>>[MySQL: results](https://github.com/zhuyuqing/bestconf/blob/master/doc/mysql.md)
-
-Getting Started
----------------
-
-1. Download the [latest release of BestConfig](https://github.com/zhuyuqing/bestconf/archive/master.zip):
-
-    ```sh
-    curl -O --location https://github.com/zhuyuqing/bestconf/archive/master.zip
-    unzip bestconf-master.zip
-    cd bestconf-master/deploy
-    ```
+Currently, Bestconfig has been tested on the following systems. It has also been applied to the Huawei Cloud+ applications.
+>>***1. Spark*** **(large-scale data processing engine)**
     
-2. Set up a system for tuning. In the project, we offer deployable examples for 6 systems, including Spark, 
-   Hive+Hadoop, Cassandra, MySQL, and Tomcat. We also specify the workload generators to be used for tuning
-   the systems.
-   
-3. Run BestConfig. 
+>>***2. Hadoop*** **(distributed processing framework for big data)**
+    
+>>***3. Hive*** **(big data warehouse)**
+    
+>>***4. MySQL*** **(database)**
+    
+>>***5. Cassandra*** **(NoSQL DB)**
+    
+>>***6. Tomcat*** **(Web Server)**
 
-    On Linux:
-    Update all system and deployment related scripts accordingly and move them to the
-    correct path on the servers.
-    Move the system-specific jar file to lib. (For example, move deploy/4BI/bestconfBI.jar
-    to deploy/lib)
-    ```sh
-    cd deploy
-    bin/start.sh
-    ```
+What’s New
+-----------
 
-Slides (in Chinese) on how to use BestConfig can also be downloaded following this [link](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx6aHV5dXFpbmd8Z3g6NmI1ZTYxMDc2N2FiOWMwNQ).
+Tutorial:  [Tuning Spark with BestConfig](http://bestconfig.readthedocs.io/en/latest/source/how%20to%20apply/index_howtoapply.html) 
 
-Or, if you would like to adapt BestConfig for your own application scenarios, you could follow our steps in [QuickStart](https://github.com/zhuyuqing/bestconf/blob/master/doc/QuickStart.md)
+Tutorial: [Automatic Configuration Setting for Systems](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx6aHV5dXFpbmd8Z3g6NmI1ZTYxMDc2N2FiOWMwNQ)(in Chinese)
 
-Building from source
+Results: Tuning [Spark](http://bestconfig.readthedocs.io/en/latest/source/examples/spark.html), [Hadoop+Hive](http://bestconfig.readthedocs.io/en/latest/source/examples/hadoop.html), [MySQL](http://bestconfig.readthedocs.io/en/latest/source/examples/mysql.html), [Cassandra](http://bestconfig.readthedocs.io/en/latest/source/examples/cassandra.html), [Tomcat+JVM](http://bestconfig.readthedocs.io/en/latest/source/examples/tomcat.html)
+
+
+Ask a Question
 --------------------
 
-Import the whole Bestconfig project into eclipse and enjoy!~
-
-
-Examples of tuning results
---------------------
-We provide the tuning results on our cluster under the testResults folder for a quick reference.
+  Please use the [bestconf/issues](https://github.com/zhuyuqing/bestconf/issues) page; or
+  
+  please contact us at: zhuyuqing@ict.ac.cn or liujianxun@ict.ac.cn
 
 Related Publications
 --------------------
@@ -71,12 +48,3 @@ Acknowledgements
 
 We thank Huawei for supporting this work. This work is also supported in part by the State Key Development Program for Basic Research of China (Grant No. 2014CB340402) and the National Natural Science Foundation of China (Grant No. 61303054).
 
-
-Notes
------
-
-If you have any question, please contact us at:
-
-   zhuyuqing@ict.ac.cn
-   
-   liujianxun@ict.ac.cn
