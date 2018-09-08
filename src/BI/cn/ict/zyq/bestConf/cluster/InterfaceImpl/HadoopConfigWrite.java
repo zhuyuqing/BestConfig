@@ -29,7 +29,12 @@ public class HadoopConfigWrite implements ConfigWrite {
 			String localPath, String remotePath) {
 		
 	}
-
+	
+	@Override
+	void uploadConfigFile(){
+		
+	}
+	
 	@Override
 	public void writetoConfigfile(HashMap hm) {
 		
